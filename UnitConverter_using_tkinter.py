@@ -468,30 +468,135 @@ def answer(n1):
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
-    elif result_from == 'Metric Ton' and result_to == 'Pound':
+    elif result_from == 'Microsecond' and result_to == 'Millisecond':
         calculate = number1 * 2204.62262
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
-    elif result_from == 'Metric Ton' and result_to == 'Pound':
+    elif result_from == 'Microsecond' and result_to == 'Second':
         calculate = number1 * 2204.62262
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
-    elif result_from == 'Metric Ton' and result_to == 'Pound':
+    elif result_from == 'Microsecond' and result_to == 'Minute':
         calculate = number1 * 2204.62262
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
-    elif result_from == 'Metric Ton' and result_to == 'Pound':
+    elif result_from == 'Microsecond' and result_to == 'Hour':
         calculate = number1 * 2204.62262
+        result.cget('text')
+        result.configure(text=(calculate,result_to))   
+    
+    elif result_from == 'Millisecond' and result_to == 'Second':
+        calculate = number1 * 0.000001
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
-    elif result_from == 'Metric Ton' and result_to == 'Pound':
-        calculate = number1 * 2204.62262
+    elif result_from == 'Millisecond' and result_to == 'Microsecond':
+        calculate = number1 * 0.001
         result.cget('text')
-        result.configure(text=(calculate,result_to))    
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Millisecond' and result_to == 'Minute':
+        calculate = number1 * 1.6667 * (10)**-8
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Millisecond' and result_to == 'Hour':
+        calculate = number1 * 2.7778 * (10)**-10
+        result.cget('text')
+        result.configure(text=(calculate,result_to)) 
+
+    elif result_from == 'Second' and result_to == 'Microsecond':
+        calculate = number1 * 1000000
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Second' and result_to == 'Millisecond':
+        calculate = number1 * 1000
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Second' and result_to == 'Minute':
+        calculate = number1 * 0.01666667
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Second' and result_to == 'Hour':
+        calculate = number1 * 0.00027778
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Minute' and result_to == 'Microsecond':
+        calculate = number1 * 60000000 
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Minute' and result_to == 'Millisecond':
+        calculate = number1 * 60000
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Minute' and result_to == 'Second':
+        calculate = number1 * 60
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Minute' and result_to == 'Hour':
+        calculate = number1 * 0.01666667
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Hour' and result_to == 'Microsecond':
+        calculate = number1 * 3.6000 * (10)**9 
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Hour' and result_to == 'Millisecond':
+        calculate = number1 * 3600000
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Hour' and result_to == 'Second':
+        calculate = number1 * 3600
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Hour' and result_to == 'Minute':
+        calculate = number1 * 60
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Celsius' and result_to == 'Fahrenheit':
+        calculate = (number1 * 1.8) + 32
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Celsius' and result_to == 'Kelvin':
+        calculate = number1 + 274.15
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Fahrenheit' and result_to == 'Celsius':
+        calculate = (number1 - 32) * 0.5555
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Fahrenheit' and result_to == 'Kelvin':
+        calculate = number1 * 255.927778
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Kelvin' and result_to == 'Fahrenheit':
+        calculate = number1 - 457.87
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Kelvin' and result_to == 'Celsius':
+        calculate = number1 - 272.15
+        result.cget('text')
+        result.configure(text=(calculate,result_to))  
 
 def selected(event):
     unit = event.widget.get()
