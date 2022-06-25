@@ -26,8 +26,422 @@ def to_func(event):
     global result_to
     result_to = event.widget.get()
 
-    pass
+# def result():
+#     calculate = 0
 #     result.cget('text')
+#     result.configure(text=(calculate,result_to))
+
+def answer(n1):
+    num1 = n1.get()
+    try:
+        number1 = int(num1)
+    except:
+        messagebox.showerror("Error",'Term not recognised')
+
+    if result_from == 'Millimetre' and result_to == 'Centimetre':
+        calculate = number1 * 0.1
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Millimetre' and result_to == 'Metre':
+        calculate = number1 * 0.001
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Millimetre' and result_to == 'Kilometre':
+        calculate = number1 * 0.000001
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+     
+    elif result_from == 'Millimetre' and result_to == 'Inch':
+        calculate = number1 * 0.03937008
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Millimetre' and result_to == 'Yard':
+        calculate = number1 * 0.00109361
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Millimetre' and result_to == 'Foot':
+        calculate = number1 * 0.00328084
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Millimetre' and result_to == 'Mile':
+        calculate = number1 * 1.6093 * (10)**6
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Centimetre' and result_to == 'Millimetre':
+        calculate = number1 / 0.1
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Centimetre' and result_to == 'Metre':
+        calculate = number1 * 0.01
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Centimetre' and result_to == 'Kilometre':
+        calculate = number1 * 0.00001
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+     
+    elif result_from == 'Centimetre' and result_to == 'Inch':
+        calculate = number1 * 0.3937008
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Centimetre' and result_to == 'Yard':
+        calculate = number1 * 0.01093613
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Centimetre' and result_to == 'Foot':
+        calculate = number1 * 0.0328084
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Centimetre' and result_to == 'Mile':
+        calculate = number1 * 0.00000621
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Metre' and result_to == 'Millimetre':
+        calculate = number1 * 1000
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Metre' and result_to == 'Centimetre':
+        calculate = number1 * 100
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Metre' and result_to == 'Kilometre':
+        calculate = number1 * 0.001
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+     
+    elif result_from == 'Metre' and result_to == 'Inch':
+        calculate = number1 * 39.3700787
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Metre' and result_to == 'Yard':
+        calculate = number1 * 1.0936133
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Metre' and result_to == 'Foot':
+        calculate = number1 * 3.2808399
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Metre' and result_to == 'Mile':
+        calculate = number1 * 0.00062137
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Kilometre' and result_to == 'Millimetre':
+        calculate = number1 * 1000000
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Kilometre' and result_to == 'Centimetre':
+        calculate = number1 * 100000
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Kilometre' and result_to == 'Metre':
+        calculate = number1 * 1000
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+     
+    elif result_from == 'Kilometre' and result_to == 'Inch':
+        calculate = number1 * 39370.0787
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Kilometre' and result_to == 'Yard':
+        calculate = number1 * 1093.6133
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Kilometre' and result_to == 'Foot':
+        calculate = number1 * 3280.8399
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Kilometre' and result_to == 'Mile':
+        calculate = number1 * 0.62137119
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Inch' and result_to == 'Millimetre':
+        calculate = number1 * 25.4
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Inch' and result_to == 'Centimetre':
+        calculate = number1 * 2.54
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Inch' and result_to == 'Metre':
+        calculate = number1 * 0.0254
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+     
+    elif result_from == 'Inch' and result_to == 'Kilometre':
+        calculate = number1 * 0.0000254
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Inch' and result_to == 'Yard':
+        calculate = number1 * 0.02777778
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Inch' and result_to == 'Foot':
+        calculate = number1 * 0.08333333
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Inch' and result_to == 'Mile':
+        calculate = number1 * 0.00001578
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Foot' and result_to == 'Millimetre':
+        calculate = number1 * 304.8
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Foot' and result_to == 'Centimetre':
+        calculate = number1 * 30.48
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Foot' and result_to == 'Metre':
+        calculate = number1 * 0.3048
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+     
+    elif result_from == 'Foot' and result_to == 'Inch':
+        calculate = number1 * 12
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Foot' and result_to == 'Yard':
+        calculate = number1 * 0.33333333
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Foot' and result_to == 'Kilometre':
+        calculate = number1 * 0.0003048
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Foot' and result_to == 'Mile':
+        calculate = number1 * 0.00018939
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Yard' and result_to == 'Millimetre':
+        calculate = number1 * 914.4
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Yard' and result_to == 'Centimetre':
+        calculate = number1 * 91.44
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Yard' and result_to == 'Metre':
+        calculate = number1 * 0.9144
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+     
+    elif result_from == 'Yard' and result_to == 'Inch':
+        calculate = number1 * 36
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Yard' and result_to == 'Kilometre':
+        calculate = number1 * 0.0009144
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Yard' and result_to == 'Foot':
+        calculate = number1 * 3
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Yard' and result_to == 'Mile':
+        calculate = number1 * 0.00056818
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Mile' and result_to == 'Millimetre':
+        calculate = number1 * 1.6093 * (10)**6
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Mile' and result_to == 'Centimetre':
+        calculate = number1 * 160934.4
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Mile' and result_to == 'Metre':
+        calculate = number1 * 1609.344
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Mile' and result_to == 'Inch':
+        calculate = number1 * 63360
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Mile' and result_to == 'Yard':
+        calculate = number1 * 1760
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Mile' and result_to == 'Foot':
+        calculate = number1 * 5280
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Mile' and result_to == 'Kilometre':
+        calculate = number1 * 1.609344
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Milligram' and result_to == 'Gram':
+        calculate = number1 * 1000
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Milligram' and result_to == 'Kilogram':
+        calculate = number1 * 100
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Milligram' and result_to == 'Ounce':
+        calculate = number1 * 0.001
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+     
+    elif result_from == 'Milligram' and result_to == 'Pound':
+        calculate = number1 * 39.3700787
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Milligram' and result_to == 'Metric Ton':
+        calculate = number1 * 1.0936133
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Gram' and result_to == 'Milligram':
+        calculate = number1 * 1000
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Gram' and result_to == 'Kilogram':
+        calculate = number1 * 100
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Gram' and result_to == 'Ounce':
+        calculate = number1 * 0.001
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+     
+    elif result_from == 'Gram' and result_to == 'Pound':
+        calculate = number1 * 39.3700787
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Gram' and result_to == 'Metric Ton':
+        calculate = number1 * 1.0936133
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Kilogram' and result_to == 'Gram':
+        calculate = number1 * 1000
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Kilogram' and result_to == 'Milligram':
+        calculate = number1 * 100
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Kilogram' and result_to == 'Ounce':
+        calculate = number1 * 0.001
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+     
+    elif result_from == 'Kilogram' and result_to == 'Pound':
+        calculate = number1 * 39.3700787
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Kilogram' and result_to == 'Metric Ton':
+        calculate = number1 * 1.0936133
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+    
+    elif result_from == 'Ounce' and result_to == 'Milligram':
+        calculate = number1 * 1000
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Ounce' and result_to == 'Gram':
+        calculate = number1 * 100
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Ounce' and result_to == 'Kilogram':
+        calculate = number1 * 0.001
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+     
+    elif result_from == 'Ounce' and result_to == 'Pound':
+        calculate = number1 * 39.3700787
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Ounce' and result_to == 'Metric Ton':
+        calculate = number1 * 1.0936133
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Pound' and result_to == 'Milligram':
+        calculate = number1 * 1000
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Pound' and result_to == 'Gram':
+        calculate = number1 * 100
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Pound' and result_to == 'Kilogram':
+        calculate = number1 * 0.001
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+     
+    elif result_from == 'Pound' and result_to == 'Ounce':
+        calculate = number1 * 39.3700787
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Pound' and result_to == 'Metric Ton':
+        calculate = number1 * 1.0936133
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
 
 def selected(event):
     unit = event.widget.get()
