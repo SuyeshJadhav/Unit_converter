@@ -464,42 +464,42 @@ def answer(n1):
         result.configure(text=(calculate,result_to))
 
     elif result_from == 'Microsecond' and result_to == 'Millisecond':
-        calculate = number1 * 2204.62262
-        result.cget('text')
-        result.configure(text=(calculate,result_to))
-
-    elif result_from == 'Microsecond' and result_to == 'Second':
-        calculate = number1 * 2204.62262
-        result.cget('text')
-        result.configure(text=(calculate,result_to))
-
-    elif result_from == 'Microsecond' and result_to == 'Minute':
-        calculate = number1 * 2204.62262
-        result.cget('text')
-        result.configure(text=(calculate,result_to))
-
-    elif result_from == 'Microsecond' and result_to == 'Hour':
-        calculate = number1 * 2204.62262
-        result.cget('text')
-        result.configure(text=(calculate,result_to))   
-    
-    elif result_from == 'Millisecond' and result_to == 'Second':
-        calculate = number1 * 0.000001
-        result.cget('text')
-        result.configure(text=(calculate,result_to))
-
-    elif result_from == 'Millisecond' and result_to == 'Microsecond':
         calculate = number1 * 0.001
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
-    elif result_from == 'Millisecond' and result_to == 'Minute':
+    elif result_from == 'Microsecond' and result_to == 'Second':
+        calculate = number1 * 0.000001
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Microsecond' and result_to == 'Minute':
         calculate = number1 * 1.6667 * (10)**-8
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
-    elif result_from == 'Millisecond' and result_to == 'Hour':
+    elif result_from == 'Microsecond' and result_to == 'Hour':
         calculate = number1 * 2.7778 * (10)**-10
+        result.cget('text')
+        result.configure(text=(calculate,result_to))   
+    
+    elif result_from == 'Millisecond' and result_to == 'Second':
+        calculate = number1 * 0.001
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Millisecond' and result_to == 'Microsecond':
+        calculate = number1 * 1000
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Millisecond' and result_to == 'Minute':
+        calculate = number1 * 0.00001667
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Millisecond' and result_to == 'Hour':
+        calculate = number1 * 2.7778 * (10)**-7
         result.cget('text')
         result.configure(text=(calculate,result_to)) 
 
