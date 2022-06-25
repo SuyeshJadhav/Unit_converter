@@ -26,11 +26,6 @@ def to_func(event):
     global result_to
     result_to = event.widget.get()
 
-# def result():
-#     calculate = 0
-#     result.cget('text')
-#     result.configure(text=(calculate,result_to))
-
 def answer(n1):
     num1 = n1.get()
     try:
