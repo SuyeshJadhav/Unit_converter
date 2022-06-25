@@ -6,9 +6,11 @@ from tkinter.constants import UNITS
 from tkinter import ttk
 
 window = tk.Tk()
+window.iconbitmap(r'UC.ico')
 window.geometry('400x400')
 window.title('Unit Converter')
 window.configure(bg='#b19cd9')
+window.resizable(False,False)
 
 font1 = font.Font(family = 'Segoe UI',size = '30')
 font2 = font.Font(family = 'Segoe UI',size = '10')
@@ -19,32 +21,32 @@ number_from = StringVar()
 def from_func(event):
     global result_from
     result_from = event.widget.get()
-    print(result_from)
 
 def to_func(event):
     global result_to
     result_to = event.widget.get()
-    print(result_to)
 
-def answer(event):
     pass
+#     result.cget('text')
 
 def selected(event):
     unit = event.widget.get()
-    if event == 'Length':
+    if unit == 'Length':
         from_dropdown['values'] = ('Millimetre',
-                                   'Centimtre',
+                                   'Centimetre',
                                    'Metre',
                                    'Kilometre',
                                    'Inch',
+                                   'Foot',
                                    'Yard',
                                    'Mile')
 
         to_dropdown['values'] = ('Millimetre',
-                                 'Centimtre',
+                                 'Centimetre',
                                  'Metre',
                                  'Kilometre',
                                  'Inch',
+                                 'Foot',
                                  'Yard',
                                  'Mile')
 
@@ -77,7 +79,13 @@ def selected(event):
                                  'Hour')
 
     elif unit == 'Temperature':
-        
+        from_dropdown['values'] = ('Celsius',
+                                   'Fahrenheit',
+                                   'Kelvin')
+
+        to_dropdown['values'] = ('Celsius',
+                                   'Fahrenheit',
+                                   'Kelvin')
 
 main = tk.Label(window, text = 'Unit Converter',bg='#b19cd9')
 main['font'] = font1
@@ -111,6 +119,8 @@ num_from = tk.Label(window, text = 'Enter value: ',bg = '#b19cd9',font = font2)
 num_from.place(relx = '0.08', rely = '0.19')
 num_from = tk.Entry(window,width = 12,textvariable=number_from)
 num_from.place(relx = '0.28', rely = '0.20')
+
+answer = partial(answer,num_from)
 
 to = tk.Label(window,text = 'To: ',bg = '#b19cd9',font=font2)
 to.place(relx = '0.08', rely = '0.55')
