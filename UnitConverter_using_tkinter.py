@@ -30,7 +30,54 @@ def answer(event):
     pass
 
 def selected(event):
-    pass
+    unit = event.widget.get()
+    if event == 'Length':
+        from_dropdown['values'] = ('Millimetre',
+                                   'Centimtre',
+                                   'Metre',
+                                   'Kilometre',
+                                   'Inch',
+                                   'Yard',
+                                   'Mile')
+
+        to_dropdown['values'] = ('Millimetre',
+                                 'Centimtre',
+                                 'Metre',
+                                 'Kilometre',
+                                 'Inch',
+                                 'Yard',
+                                 'Mile')
+
+    elif unit == 'Mass':
+        from_dropdown['values'] = ('Milligram',
+                                   'Gram',
+                                   'Kilogram',
+                                   'Ounce',
+                                   'Pound',
+                                   'Metric Ton')
+
+        to_dropdown['values'] = ('Milligram',
+                                 'Gram',
+                                 'Kilogram',
+                                 'Ounce',
+                                 'Pound',
+                                 'Metric Ton')
+
+    elif unit == 'Time':
+        from_dropdown['values'] = ('Microsecond',
+                                   'Millisecond',
+                                   'Second',
+                                   'Minute',
+                                   'Hour')
+
+        to_dropdown['values'] = ('Microsecond',
+                                 'Millisecond',
+                                 'Second',
+                                 'Minute',
+                                 'Hour')
+
+    elif unit == 'Temperature':
+        
 
 main = tk.Label(window, text = 'Unit Converter',bg='#b19cd9')
 main['font'] = font1
@@ -43,7 +90,7 @@ n = StringVar()
 unit_dropdown = ttk.Combobox(window,width = '35',textvariable = n)
 
 unit_dropdown['values'] = ('Length',
-                           'Weight',
+                           'Mass',
                            'Time',
                            'Temperature')
 unit_dropdown.place(relx = '0.50', rely = '0.32',anchor = 'center')
