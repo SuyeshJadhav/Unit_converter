@@ -319,27 +319,27 @@ def answer(n1):
         result.configure(text=(calculate,result_to))
 
     elif result_from == 'Milligram' and result_to == 'Gram':
-        calculate = number1 * 1000
+        calculate = number1 * 0.001
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
     elif result_from == 'Milligram' and result_to == 'Kilogram':
-        calculate = number1 * 100
+        calculate = number1 * 0.000001
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
     elif result_from == 'Milligram' and result_to == 'Ounce':
-        calculate = number1 * 0.001
+        calculate = number1 * 0.00003527
         result.cget('text')
         result.configure(text=(calculate,result_to))
      
     elif result_from == 'Milligram' and result_to == 'Pound':
-        calculate = number1 * 39.3700787
+        calculate = number1 * 0.0000022
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
     elif result_from == 'Milligram' and result_to == 'Metric Ton':
-        calculate = number1 * 1.0936133
+        calculate = number1 * 10**-9
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
@@ -349,99 +349,149 @@ def answer(n1):
         result.configure(text=(calculate,result_to))
 
     elif result_from == 'Gram' and result_to == 'Kilogram':
-        calculate = number1 * 100
+        calculate = number1 * 0.001
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
     elif result_from == 'Gram' and result_to == 'Ounce':
-        calculate = number1 * 0.001
+        calculate = number1 * 0.03527396
         result.cget('text')
         result.configure(text=(calculate,result_to))
      
     elif result_from == 'Gram' and result_to == 'Pound':
-        calculate = number1 * 39.3700787
+        calculate = number1 * 0.00220462
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
     elif result_from == 'Gram' and result_to == 'Metric Ton':
-        calculate = number1 * 1.0936133
+        calculate = number1 * 0.000001
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
     elif result_from == 'Kilogram' and result_to == 'Gram':
-        calculate = number1 * 1000
+        calculate = number1 * 1000000
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
     elif result_from == 'Kilogram' and result_to == 'Milligram':
-        calculate = number1 * 100
+        calculate = number1 * 1000
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
     elif result_from == 'Kilogram' and result_to == 'Ounce':
-        calculate = number1 * 0.001
+        calculate = number1 * 35.273962
         result.cget('text')
         result.configure(text=(calculate,result_to))
      
     elif result_from == 'Kilogram' and result_to == 'Pound':
-        calculate = number1 * 39.3700787
+        calculate = number1 * 2.20462262
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
     elif result_from == 'Kilogram' and result_to == 'Metric Ton':
-        calculate = number1 * 1.0936133
+        calculate = number1 * 0.001
         result.cget('text')
         result.configure(text=(calculate,result_to))
     
     elif result_from == 'Ounce' and result_to == 'Milligram':
-        calculate = number1 * 1000
+        calculate = number1 * 28349.5231
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
     elif result_from == 'Ounce' and result_to == 'Gram':
-        calculate = number1 * 100
+        calculate = number1 * 28.3495231
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
     elif result_from == 'Ounce' and result_to == 'Kilogram':
-        calculate = number1 * 0.001
+        calculate = number1 * 0.02834952
         result.cget('text')
         result.configure(text=(calculate,result_to))
      
     elif result_from == 'Ounce' and result_to == 'Pound':
-        calculate = number1 * 39.3700787
+        calculate = number1 * 0.0625
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
     elif result_from == 'Ounce' and result_to == 'Metric Ton':
-        calculate = number1 * 1.0936133
+        calculate = number1 * 0.00002835
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
     elif result_from == 'Pound' and result_to == 'Milligram':
-        calculate = number1 * 1000
+        calculate = number1 * 453592.37
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
     elif result_from == 'Pound' and result_to == 'Gram':
-        calculate = number1 * 100
+        calculate = number1 * 453.59237
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
     elif result_from == 'Pound' and result_to == 'Kilogram':
-        calculate = number1 * 0.001
+        calculate = number1 * 0.45359237
         result.cget('text')
         result.configure(text=(calculate,result_to))
      
     elif result_from == 'Pound' and result_to == 'Ounce':
-        calculate = number1 * 39.3700787
+        calculate = number1 * 16
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
     elif result_from == 'Pound' and result_to == 'Metric Ton':
-        calculate = number1 * 1.0936133
+        calculate = number1 * 0.00045359
         result.cget('text')
         result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Metric Ton' and result_to == 'Milligram':
+        calculate = number1 * 10**9
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Metric Ton' and result_to == 'Gram':
+        calculate = number1 * 1000000
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Metric Ton' and result_to == 'Kilogram':
+        calculate = number1 * 1000
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+     
+    elif result_from == 'Metric Ton' and result_to == 'Ounce':
+        calculate = number1 * 35273.962
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Metric Ton' and result_to == 'Pound':
+        calculate = number1 * 2204.62262
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Metric Ton' and result_to == 'Pound':
+        calculate = number1 * 2204.62262
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Metric Ton' and result_to == 'Pound':
+        calculate = number1 * 2204.62262
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Metric Ton' and result_to == 'Pound':
+        calculate = number1 * 2204.62262
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Metric Ton' and result_to == 'Pound':
+        calculate = number1 * 2204.62262
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Metric Ton' and result_to == 'Pound':
+        calculate = number1 * 2204.62262
+        result.cget('text')
+        result.configure(text=(calculate,result_to))    
 
 def selected(event):
     unit = event.widget.get()
