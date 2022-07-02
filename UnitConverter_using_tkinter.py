@@ -32,31 +32,6 @@ def answer(n1):
         number1 = int(num1)
     except:
         messagebox.showerror("Error",'Term not recognised')
-        
-
-    # if result_from == 'Millimetre':
-    #     inter = number1 * 0.001
-
-    # elif result_from == 'Metre':
-    #     inter = number1 * 1
-    
-    # elif result_from == 'Centimetre':
-    #     inter = number1 * 0.01
-
-    # elif result_from == 'Kilometre':
-    #     inter = number1 * 1000
-
-    # elif result_from == 'Inch':
-    #     inter = number1 * 0.0254
-
-    # elif result_from == 'Foot':
-    #     inter = number1 * 0.3048
-
-    # elif result_from == 'Yard':
-    #     inter = number1 * 0.9144
-
-    # elif result_from == 'Mile':
-    #     inter = number1 * 1609.344
 
     if result_from == 'Millimetre' and result_to == 'Centimetre':
         calculate = number1 * 0.1
