@@ -29,7 +29,7 @@ def to_func(event):
 def answer(n1):
     num1 = n1.get()
     try:
-        number1 = int(num1)
+        number1 = float(num1)
     except:
         messagebox.showerror("Error",'Term not recognised')
 
@@ -38,7 +38,6 @@ def answer(n1):
         result.cget('text')
         result.configure(text=(calculate,result_to))
         
-
     elif result_from == 'Millimetre' and result_to == 'Metre':
         calculate = number1 * 0.001
         result.cget('text')
@@ -69,6 +68,11 @@ def answer(n1):
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
+    elif result_from == 'Millimetre' and result_to == 'Millimetre':
+        calculate = number1 
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
     elif result_from == 'Centimetre' and result_to == 'Millimetre':
         calculate = number1 / 0.1
         result.cget('text')
@@ -94,13 +98,18 @@ def answer(n1):
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
-    elif result_from == 'Centimetre' and result_to == 'Foot':
-        calculate = number1 * 0.0328084
+    elif result_from == 'Centimetre' and result_to == 'Centimetre':
+        calculate = number1 
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
     elif result_from == 'Centimetre' and result_to == 'Mile':
         calculate = number1 * 0.00000621
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Centimetre' and result_to == 'Mile':
+        calculate = number1 * 1.6093 * (10)**6
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
@@ -116,6 +125,11 @@ def answer(n1):
 
     elif result_from == 'Metre' and result_to == 'Kilometre':
         calculate = number1 * 0.001
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Metre' and result_to == 'Metre':
+        calculate = number1
         result.cget('text')
         result.configure(text=(calculate,result_to))
      
@@ -151,6 +165,11 @@ def answer(n1):
 
     elif result_from == 'Kilometre' and result_to == 'Metre':
         calculate = number1 * 1000
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Kilometre' and result_to == 'Kilometre':
+        calculate = number1
         result.cget('text')
         result.configure(text=(calculate,result_to))
      
@@ -194,6 +213,11 @@ def answer(n1):
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
+    elif result_from == 'Inch' and result_to == 'Inch':
+        calculate = number1
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
     elif result_from == 'Inch' and result_to == 'Yard':
         calculate = number1 * 0.02777778
         result.cget('text')
@@ -229,6 +253,11 @@ def answer(n1):
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
+    elif result_from == 'Foot' and result_to == 'Foot':
+        calculate = number1
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
     elif result_from == 'Foot' and result_to == 'Yard':
         calculate = number1 * 0.33333333
         result.cget('text')
@@ -256,6 +285,11 @@ def answer(n1):
 
     elif result_from == 'Yard' and result_to == 'Metre':
         calculate = number1 * 0.9144
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Yard' and result_to == 'Yard':
+        calculate = number1
         result.cget('text')
         result.configure(text=(calculate,result_to))
      
@@ -304,6 +338,11 @@ def answer(n1):
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
+    elif result_from == 'Mile' and result_to == 'Mile':
+        calculate = number1
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
     elif result_from == 'Mile' and result_to == 'Foot':
         calculate = number1 * 5280
         result.cget('text')
@@ -334,6 +373,11 @@ def answer(n1):
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
+    elif result_from == 'Milligram' and result_to == 'Milligram':
+        calculate = number1
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
     elif result_from == 'Milligram' and result_to == 'Metric Ton':
         calculate = number1 * 10**-9
         result.cget('text')
@@ -351,6 +395,11 @@ def answer(n1):
 
     elif result_from == 'Gram' and result_to == 'Ounce':
         calculate = number1 * 0.03527396
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Gram' and result_to == 'Gram':
+        calculate = number1
         result.cget('text')
         result.configure(text=(calculate,result_to))
      
@@ -384,6 +433,11 @@ def answer(n1):
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
+    elif result_from == 'Kilogram' and result_to == 'Kilogram':
+        calculate = number1
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
     elif result_from == 'Kilogram' and result_to == 'Metric Ton':
         calculate = number1 * 0.001
         result.cget('text')
@@ -409,6 +463,11 @@ def answer(n1):
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
+    elif result_from == 'Ounce' and result_to == 'Ounce':
+        calculate = number1
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
     elif result_from == 'Ounce' and result_to == 'Metric Ton':
         calculate = number1 * 0.00002835
         result.cget('text')
@@ -431,6 +490,11 @@ def answer(n1):
      
     elif result_from == 'Pound' and result_to == 'Ounce':
         calculate = number1 * 16
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Pound' and result_to == 'Pound':
+        calculate = number1
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
@@ -464,6 +528,11 @@ def answer(n1):
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
+    elif result_from == 'Metric Ton' and result_to == 'Metric Ton':
+        calculate = number1
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
     elif result_from == 'Microsecond' and result_to == 'Millisecond':
         calculate = number1 * 0.001
         result.cget('text')
@@ -479,6 +548,11 @@ def answer(n1):
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
+    elif result_from == 'Microsecond' and result_to == 'Microsecond':
+        calculate = number1
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
     elif result_from == 'Microsecond' and result_to == 'Hour':
         calculate = number1 * 2.7778 * (10)**-10
         result.cget('text')
@@ -491,6 +565,11 @@ def answer(n1):
 
     elif result_from == 'Millisecond' and result_to == 'Microsecond':
         calculate = number1 * 1000
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Millisecond' and result_to == 'Millisecond':
+        calculate = number1
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
@@ -519,6 +598,11 @@ def answer(n1):
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
+    elif result_from == 'Second' and result_to == 'Second':
+        calculate = number1
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
     elif result_from == 'Second' and result_to == 'Hour':
         calculate = number1 * 0.00027778
         result.cget('text')
@@ -544,6 +628,11 @@ def answer(n1):
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
+    elif result_from == 'Minute' and result_to == 'Minute':
+        calculate = number1
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
     elif result_from == 'Hour' and result_to == 'Microsecond':
         calculate = number1 * 3.6000 * (10)**9 
         result.cget('text')
@@ -564,8 +653,18 @@ def answer(n1):
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
+    elif result_from == 'Hour' and result_to == 'Hour':
+        calculate = number1
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
     elif result_from == 'Celsius' and result_to == 'Fahrenheit':
         calculate = (number1 * 1.8) + 32
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
+    elif result_from == 'Celsius' and result_to == 'Celsius':
+        calculate = number1
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
@@ -584,6 +683,11 @@ def answer(n1):
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
+    elif result_from == 'Fahrenheit' and result_to == 'Fahrenheit':
+        calculate = number1
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
+
     elif result_from == 'Kelvin' and result_to == 'Fahrenheit':
         calculate = number1 - 457.87
         result.cget('text')
@@ -593,6 +697,11 @@ def answer(n1):
         calculate = number1 - 272.15
         result.cget('text')
         result.configure(text=(calculate,result_to))  
+
+    elif result_from == 'Kelvin' and result_to == 'Kelvin':
+        calculate = number1
+        result.cget('text')
+        result.configure(text=(calculate,result_to))
 
 def selected(event):
     unit = event.widget.get()
