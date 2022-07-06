@@ -27,11 +27,13 @@ def to_func(event):
     result_to = event.widget.get()
 
 def answer(n1):
-    num1 = n1.get()
+    num1 = n1.get()                                  # Error show if not number or empty
     try:
         number1 = float(num1)
     except:
         messagebox.showerror("Error",'Term not recognised')
+
+    #Length
 
     if result_from == 'Millimetre' and result_to == 'Centimetre':
         calculate = number1 * 0.1
@@ -353,6 +355,8 @@ def answer(n1):
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
+    # Mass
+
     elif result_from == 'Milligram' and result_to == 'Gram':
         calculate = number1 * 0.001
         result.cget('text')
@@ -533,6 +537,8 @@ def answer(n1):
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
+    # Time
+
     elif result_from == 'Microsecond' and result_to == 'Millisecond':
         calculate = number1 * 0.001
         result.cget('text')
@@ -658,6 +664,8 @@ def answer(n1):
         result.cget('text')
         result.configure(text=(calculate,result_to))
 
+    # Temperature
+
     elif result_from == 'Celsius' and result_to == 'Fahrenheit':
         calculate = (number1 * 1.8) + 32
         result.cget('text')
@@ -761,12 +769,18 @@ def selected(event):
                                    'Fahrenheit',
                                    'Kelvin')
 
+        # Main Window
+
 main = tk.Label(window, text = 'Unit Converter',bg='#b19cd9')
 main['font'] = font1
 main.place(relx = '0.5', rely = '0.1', anchor = 'center')
 
+        # Unit label
+
 unit = tk.Label(window,text = 'Unit: ',bg = '#b19cd9', font  = font2)
 unit.place(relx = '0.12', rely = '0.32', anchor = 'center')
+
+        # Unit Dropdown
 
 n = StringVar()
 unit_dropdown = ttk.Combobox(window,width = '35',textvariable = n)
@@ -779,8 +793,12 @@ unit_dropdown.place(relx = '0.50', rely = '0.32',anchor = 'center')
 unit_dropdown.current()
 unit_dropdown.bind('<<ComboboxSelected>>',selected)
 
+        # From Label
+
 label_from = tk.Label(window,text = 'From: ',bg = '#b19cd9',font=font2)
 label_from.place(relx = '0.08',rely = '0.41')
+
+        #From Dropdown
 
 f =StringVar()
 from_dropdown = ttk.Combobox(window,width = '35',textvariable=f)
@@ -789,6 +807,8 @@ from_dropdown.place(relx = '0.50', rely = '0.45', anchor = 'center')
 from_dropdown.current()
 from_dropdown.bind('<<ComboboxSelected>>', from_func)
 
+        # Input Label
+
 num_from = tk.Label(window, text = 'Enter value: ',bg = '#b19cd9',font = font2)
 num_from.place(relx = '0.08', rely = '0.19')
 num_from = tk.Entry(window,width = 12,textvariable=number_from)
@@ -796,8 +816,12 @@ num_from.place(relx = '0.28', rely = '0.20')
 
 answer = partial(answer,num_from)
 
+        # To Label
+
 to = tk.Label(window,text = 'To: ',bg = '#b19cd9',font=font2)
 to.place(relx = '0.08', rely = '0.55')
+
+        # To Dropdown
 
 t  = StringVar()
 to_dropdown = ttk.Combobox(window,width = 35, textvariable=t)
@@ -806,14 +830,16 @@ to_dropdown.place(relx = '0.50', rely = '0.58', anchor = 'center')
 to_dropdown.current()
 to_dropdown.bind('<<ComboboxSelected>>',to_func)
 
+        # Output Label
+
 result_i = tk.Label(window,text = 'Result: ', bg = '#b19cd9' , font=font2)
 result_i.place(relx = '0.08', rely = '0.69')
 result = tk.Label(window, text = '',bg = 'white', width = 32,font=font2)
 result.place(relx = '0.50', rely = '0.72',anchor = 'center')
 
+        # Answer Button
+
 get_answer = tk.Button(window,text = 'Get Answer',font = font2,command=answer)
 get_answer.place(relx = '0.42',rely = '0.78')
-
-
 
 window.mainloop()
